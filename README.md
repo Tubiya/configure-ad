@@ -24,18 +24,19 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Resource Groupe
+- Create a Virtual Network and Subnet
+- Create the Domain Controller VM
+- Create the Client VM
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/33bb637f-2515-4c04-a168-b8a89ea3a6cc" />
+<img width="463" alt="image" src="https://github.com/user-attachments/assets/af95891c-4db1-486f-a957-23f6924c65f3" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create a Resource Group, Then make a Virtual Network and Subnet 
 </p>
 <br />
 
