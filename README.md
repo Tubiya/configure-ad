@@ -24,26 +24,68 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Create a Resource Groupe
-- Create a Virtual Network and Subnet
-- Create the Domain Controller VM
-- Create the Client VM
+- Install Active Directory
+- Create a Domain Admin user within the domain
+- Join Client-1 to your domain (mydomain.com)
+- Setup Remote Desktop for non-administrative users on Client-1
+- Create a bunch of additional users and attempt to log into client-1 with one of the users
 
-<h2>Deployment and Configuration Steps</h2>
+  
+
+<h2>Preparing AD Infrastructure in Azure</h2>
 
 <p>
 <img width="464" alt="image" src="https://github.com/user-attachments/assets/33bb637f-2515-4c04-a168-b8a89ea3a6cc" />
 <img width="463" alt="image" src="https://github.com/user-attachments/assets/af95891c-4db1-486f-a957-23f6924c65f3" />
 </p>
 <p>
+  Setup Domain Controller in Azure
 Create a Resource Group, Then make a Virtual Network and Subnet 
+  Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+  (After VM is created, set Domain NIC Private IP address to be static)
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="372" alt="image" src="https://github.com/user-attachments/assets/bdd89c8f-9b39-46cf-82d5-1f9bae1b4fd9" />
 </p>
+
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Setup Client-1 in Azure
+Creat the Client VM  (Windows 10) named “Client-1”
+Attach it to the same region and Virtual Network as DC-1 
+  After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
+  From the Azure Portal, restart Client-1
+
+</p>
+<br />
+
+<p>
+<img width="372" alt="image" src="https://github.com/user-attachments/assets/bdd89c8f-9b39-46cf-82d5-1f9bae1b4fd9" />
+</p>
+
+<p>
+Login to Client-1
+Attempt to ping DC-1’s private IP address
+Ensure the ping succeeded
+From Client-1, open PowerShell and run ipconfig /all
+The output for the DNS settings should show DC-1’s private IP Address
+
+</p>
+<br />
+
+<h2>Deployment and Configuration Steps</h2>
+
+<p>
+<img width="372" alt="image" src="https://github.com/user-attachments/assets/bdd89c8f-9b39-46cf-82d5-1f9bae1b4fd9" />
+</p>
+
+<p>
+Login to Client-1
+Attempt to ping DC-1’s private IP address
+Ensure the ping succeeded
+From Client-1, open PowerShell and run ipconfig /all
+The output for the DNS settings should show DC-1’s private IP Address
+
 </p>
 <br />
