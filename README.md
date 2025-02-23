@@ -77,15 +77,12 @@ The output for the DNS settings should show DC-1’s private IP Address
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img width="372" alt="image" src="https://github.com/user-attachments/assets/bdd89c8f-9b39-46cf-82d5-1f9bae1b4fd9" />
+<img width="713" alt="image" src="https://github.com/user-attachments/assets/c4f36b43-572e-48ec-b58c-bb82bc544f70" />
 </p>
 
 <p>
-Login to Client-1
-Attempt to ping DC-1’s private IP address
-Ensure the ping succeeded
-From Client-1, open PowerShell and run ipconfig /all
-The output for the DNS settings should show DC-1’s private IP Address
-
+Login to DC-1 and install Active Directory Domain Services
+Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+Restart and then log back into DC-1 as user: mydomain.com\labuser
 </p>
 <br />
